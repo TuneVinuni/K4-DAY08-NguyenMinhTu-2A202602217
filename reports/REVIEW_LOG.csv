@@ -1,0 +1,12 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0099.jpg,"Xe tối lớn ở giữa đáy ảnh, đèn pha sáng rõ (x=498-614, y=574-718 px)",added,"AI bỏ sót xe gần camera dù nhìn rõ thân xe; guideline: nhìn rõ thân xe thì vẽ box ôm sát thân, tính cả gương và đèn, không tính vệt sáng đèn pha trên mặt đường"
+1,frame_0099.jpg,"Xe con bật đèn pha ở làn giữa bên phải (x=720-810, y=430-492 px)",added,"AI bỏ sót; thân xe tối nhưng đoán được đường viền quanh cụm đèn nên vẽ box theo thân xe, không chỉ khoanh hai chấm đèn"
+1,frame_0099.jpg,"Xe đèn hậu đỏ ở làn đối diện, phía sau box 0 (x=692-747, y=333-366 px)",added,"AI bỏ sót xe màu tối; box cao trên 16 px nên được tính khi chấm, phải gán nhãn"
+1,frame_0099.jpg,"Xe bị cắt ở mép phải ảnh (box AI x=1243-1280, y=427-490 px)",accepted,"Giữ box AI: guideline cho phép xe bị cắt ở mép ảnh, chỉ vẽ phần nằm trong ảnh; box đã sát mép và thân xe (khớp chỗ 1 trong BLIND_SCAN.md)"
+1,frame_0099.jpg,"Xe nhoè chuyển động ở góc dưới phải (box AI x=1023-1160, y=640-718 px)",accepted,"Giữ box AI: xe bị nhoè do chuyển động vẫn gán nhãn, box ôm vùng nhoè của thân xe và bị cắt ở mép dưới"
+1,frame_0331.jpg,"Box lớn gộp hai vật ở làn trái (box AI x=442-558, y=392-451 px)",deleted,"Box trùng: đè lên box xe x=443-503 và lan sang mặt đường; guideline yêu cầu mỗi xe một box riêng, không gộp"
+1,frame_0331.jpg,"Box trên vùng mặt đường sáng bên phải xe làn trái (box AI x=490-558, y=395-444 px)",deleted,"Box giả: bên trong chỉ là ánh đèn phản chiếu trên mặt đường, không có thân xe; guideline: không gán nhãn ánh đèn phản chiếu"
+1,frame_0331.jpg,"Box nhỏ nằm trong box xe đèn hậu ở làn đối diện (box AI x=865-911, y=344-380 px)",deleted,"Box trùng: cùng một xe với box x=865-937, y=342-383 nên xóa box nhỏ và giữ box ôm đủ thân xe"
+1,frame_0331.jpg,"Xe tối bị cắt ở mép dưới bên trái (x=194-372, y=608-720 px)",added,"AI bỏ sót xe màu tối bị cắt ở mép ảnh; guideline: chỉ vẽ box cho phần nằm trong ảnh"
+1,frame_0331.jpg,"Xe bị cắt ở mép dưới giữa ảnh, chỉ thấy nóc và đèn (x=779-919, y=676-720 px)",added,"AI bỏ sót xe bị cắt ở mép dưới; vẽ box phần thân xe trong ảnh"
+1,frame_0331.jpg,"Xe con bật đèn pha giữa làn trái và làn giữa (x=647-714, y=397-443 px)",added,"AI bỏ sót dù thấy thân xe và hai đèn pha rõ; vẽ box ôm thân xe, không tính vệt đèn trên mặt đường"
